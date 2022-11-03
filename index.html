@@ -32,10 +32,20 @@
             </tr>
         </table>
         <h2>Inscreva-se para saber mais sobre o lançamento!</h2>
-        <button class="register">Inscreva-se</button>
+        <a href="#register">Inscreva-se</a>
     </div>
     <div class="rocket">
         <img src="./images/rocket.svg" alt="Foguete decolando">
+    </div>
+    <div id="register" class="modal">
+        <a href="#close" title="Fechar" class="close">x</a>
+        <form action="">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="seuemail@exemplo.com">
+            <button type="submit">Enviar</button>
+        </form>
     </div>
     <script src="./script.js"></script>
 </body>
