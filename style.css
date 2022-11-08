@@ -41,7 +41,7 @@ body {
     padding: 40px 0 40px 0;
 }
 
-.container-main-content a {
+.container-main-content #button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +57,7 @@ body {
     cursor: pointer;
 }
 
-a:hover {
+#button:hover, #target-inner .submit:hover {
     transition: .3s;
     border: #6C63FF 3px solid;
     background-color: #6b63ff31;
@@ -92,3 +92,69 @@ table .timer {
     font-size: 100px;
 }
 
+#target-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+#target-content:target {
+    pointer-events: all;
+    opacity: 1;
+}
+
+#target-inner {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 48px;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    color: #6C63FF;
+    line-height: 30px;
+    border-radius: 10px;
+    background: white url(./images/registration.svg) no-repeat right;
+}
+
+#target-inner input{
+    width: 200px;
+    text-align: center;
+    color: #4D4C59;
+}
+
+#target-inner .submit {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    width: 120px;
+    height: 35px;
+    background-color: #6C63FF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.close {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #34495e;
+    opacity: 0.5;
+    transition: opacity 200ms;
+}
+
+.close:hover {
+    opacity: 0.4;
+}
