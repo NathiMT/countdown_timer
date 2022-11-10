@@ -8,7 +8,7 @@
 
 body {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     padding: 5px 50px 5px 50px;
     display: flex;
     align-items: center;
@@ -111,7 +111,6 @@ table .timer {
 #target-inner {
     position: absolute;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     padding: 48px;
     width: 40%;
@@ -157,4 +156,46 @@ table .timer {
 
 .close:hover {
     opacity: 0.4;
+}
+
+@media (max-width: 1024px) {
+    .rocket {
+        display: none;
+    }
+
+    .container-main-content{
+        text-align: center;
+    }
+
+    table .timer {
+        font-size: 75px;
+    }
+
+    #target-inner {
+        background-image: none;
+    }
+}
+
+@media (max-width: 426px) {
+    table .timer {
+        font-size: 23px;
+    }
+
+    table .titles {
+        font-size: 9px;
+        font-weight: bold;
+    }
+
+    .days, .hours, .minutes, .seconds {
+        min-width: 40px;
+    }
+
+    .container-main-content h1 {
+        font-size: 30px;
+    }
+
+    #target-inner {
+        padding: 30px;
+        width: 80%;
+    }
 }
